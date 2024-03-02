@@ -103,43 +103,26 @@ body {
 .stacks-content h3 {
     color: var(--color-white);
     font-size: 1.15rem;
-    margin-left: 20px;
+    margin-left: 0.5px;
+    margin-bottom: 10px;
 }
 
 .stacks ul {
-    column-count: 4;
-    column-gap: 25px;
-    
-    /*
-    codigo video aula
-    display: flex;
-    align-items: center;
-    flex-direction: row;*/
-
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+    gap: 30px; /* Espaçamento entre as imagens */
+    justify-items: center; /* Centraliza o conteúdo na horizontal */
 }
 
 .stacks ul li {
-    display: block;
-    margin: 10px 0;
-    padding: 10px;
+    position: relative;
     list-style: none;
-    width: calc(50% - 10px); /* Ajusta o tamanho de cada item para ocupar metade da largura da coluna */
-    box-sizing: border-box; /* Considera padding e borda no cálculo do tamanho */
-    text-align: center; /* Centraliza o conteúdo */
-    position: relative;
-    
-    /*
-    codigo video aula
-    display: flex;
-    align-items: center;
-    position: relative;
-    margin: 10px;
-    padding: 10px;
-    list-style: none;*/
+    width: 100%;
+    text-align: center;
 }
 
 .stacks ul li img {
-    width: 40px;
+    width: 40px; /* Ajuste o tamanho conforme necessário */
     height: auto;
     transition: transform .3s ease;
 }
@@ -152,13 +135,32 @@ body {
 .stacks ul li div:hover::after {
     content: attr(data);
     position: absolute;
-    top: 100%;
-    left: 10px;
-    width: 20px;
-    height: 20px;
+    bottom: -30px; /* Posição abaixo da imagem */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    padding: 5px 10px; /* Espaçamento interno */
     color: var(--color-white);
-
+    border-radius: 5px;
+    white-space: nowrap; /* Impede quebrar o texto em várias linhas */
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 0.3s ease;
 }
+
+.stacks ul li div:hover::before {
+    content: '';
+    position: absolute;
+    bottom: -10px; /* Posição abaixo da imagem */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent rgba(0, 0, 0, 0.8) transparent; /* Triângulo para apontar para a imagem */
+}
+
+.stacks ul li div:hover::after {
+    opacity: 1; /* Torna visível ao passar o mouse */
+}
+
 
 @keyframes written_text {
     100% {
@@ -182,3 +184,62 @@ body {
         left: 100%;
     }
 }
+
+
+
+/*
+.stacks ul {
+    column-count: 4;
+    column-gap: 25px;
+    
+    /*
+    codigo video aula
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+.stacks ul li {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    list-style: none;
+    width: calc(50% -10px); /* Ajusta o tamanho de cada item para ocupar metade da largura da coluna 
+    box-sizing: border-box; /* Considera padding e borda no cálculo do tamanho 
+    text-align: center; /* Centraliza o conteúdo 
+    position: relative;
+    
+    /*
+    codigo video aula
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 10px;
+    padding: 10px;
+    list-style: none;
+}
+
+.stacks ul li img {
+    width: 40px;
+    height: auto;
+    transition: transform .3s ease;
+}
+
+.stacks ul li div img:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+
+.stacks ul li div:hover::after {
+    content: attr(data);
+    position: absolute;
+    top: 100%;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    color: var(--color-white);
+
+}
+*/
