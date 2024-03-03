@@ -174,7 +174,7 @@ body {
     position: relative;
     flex-direction: column;
 
-    background-image: url(img/img1.jpg);
+    background-image: url("./img/img1.jpg");
     background-size: cover;
     background-position: top center;
   
@@ -192,7 +192,7 @@ body {
     width: 100%;
     opacity: .7;
     z-index: -1;
-    background-image: url(img/img1.jpg);
+ 
     background:
       linear-gradient(90deg, transparent 30%, var(--color-preto)),
       linear-gradient(180deg, transparent 30%, var(--color-preto)),
