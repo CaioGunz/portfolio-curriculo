@@ -174,12 +174,13 @@ body {
     position: relative;
     flex-direction: column;
 
-    background-image: url('./img/img1.jpg');
+    background-image: url('img/img1.jpg');
     background-size: cover;
     background-position: top center;
   
     z-index: 1;
   }
+
   
 .person-background::after {
     content: "";
@@ -198,7 +199,7 @@ body {
       linear-gradient(180deg, transparent 30%, var(--color-preto)),
       linear-gradient(0deg, transparent 65%, var(--color-preto));
   }
-  
+
 .wrapper-profile-photo {
     display: flex;
     justify-content: center;
