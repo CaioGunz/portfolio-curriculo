@@ -13,6 +13,8 @@
     --color-verde-escuro: #008F81;
     --color-verde-claro: #00A293;
     --color-preto: #000000;
+    --color-azul-verde-claro: #01DAC9;
+    --color-azul-ver-escuro: #003638;
 
 }
 
@@ -72,7 +74,7 @@ body {
     left: 0;
     width: 0px;
     height: 100%;
-    background: var(--color-verde-escuro);
+    background: var(--color-azul-verde-claro);
     animation: written_text_box 1s ease;
     animation-delay: .5s;
 }
@@ -161,6 +163,83 @@ body {
     opacity: 1; /* Torna visível ao passar o mouse */
 }
 
+.person-background {
+    height: 100vh;
+    width: 50%;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    position: relative;
+    flex-direction: column;
+  
+    background-image: url(/img/img1.jpg);
+    background-size: cover;
+    background-position: top center;
+  
+    z-index: 1;
+  }
+  
+.person-background::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+  
+    height: 100%;
+    width: 100%;
+  
+    opacity: .7;
+    z-index: -1;
+  
+    background:
+      linear-gradient(90deg, transparent 30%, var(--color-preto)),
+      linear-gradient(180deg, transparent 30%, var(--color-preto)),
+      linear-gradient(0deg, transparent 65%, var(--color-preto));
+  }
+  
+.wrapper-profile-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    padding: calc(1vw + 0.2rem);
+    margin: 20px 15px;
+  
+    border-radius: 50%;
+    background:
+      radial-gradient(rgba(0, 0, 0, 0.15) 60%, transparent 0),
+      radial-gradient(#000 68%, transparent 0),
+      linear-gradient(to top right, var(--color-azul-verde-claro) 0%, var(--color-azul-ver-escuro) 100%);
+  }
+  
+.profile-photo {
+    max-width: 320px;
+    width: 100%;
+    border-radius: 50%;
+  } 
+
+.links a {
+    display: inline-block;
+    outline: none;
+  }
+  
+.links a img {
+    width: calc(2vw + 0.8rem);
+    height: calc(2vw + 0.8rem);
+  
+    margin: calc(0.8vw + 0.8rem);
+    filter: brightness(.8);
+    transition: all .3s ease;
+  }
+  
+.links a img:hover {
+    transform: scale(1.15);
+    filter: brightness(1);
+  }
+
+  /* Final da primeira pagina */
 
 @keyframes written_text {
     100% {
@@ -170,7 +249,7 @@ body {
 
 @keyframes written_text_name {
     100% {
-        color: var(--color-verde-claro)
+        color: var(--color-verde-escuro)
     }
 }
 
@@ -184,62 +263,3 @@ body {
         left: 100%;
     }
 }
-
-
-
-/*
-.stacks ul {
-    column-count: 4;
-    column-gap: 25px;
-    
-    /*
-    codigo video aula
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-
-}
-
-.stacks ul li {
-    display: block;
-    margin: 10px 0;
-    padding: 10px;
-    list-style: none;
-    width: calc(50% -10px); /* Ajusta o tamanho de cada item para ocupar metade da largura da coluna 
-    box-sizing: border-box; /* Considera padding e borda no cálculo do tamanho 
-    text-align: center; /* Centraliza o conteúdo 
-    position: relative;
-    
-    /*
-    codigo video aula
-    display: flex;
-    align-items: center;
-    position: relative;
-    margin: 10px;
-    padding: 10px;
-    list-style: none;
-}
-
-.stacks ul li img {
-    width: 40px;
-    height: auto;
-    transition: transform .3s ease;
-}
-
-.stacks ul li div img:hover {
-    transform: scale(1.2);
-    cursor: pointer;
-}
-
-
-.stacks ul li div:hover::after {
-    content: attr(data);
-    position: absolute;
-    top: 100%;
-    left: 10px;
-    width: 20px;
-    height: 20px;
-    color: var(--color-white);
-
-}
-*/
