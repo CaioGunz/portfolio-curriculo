@@ -187,16 +187,14 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-  
     height: 100%;
     width: 100%;
     opacity: .7;
     z-index: -1;
- 
     background:
-      linear-gradient(90deg, transparent 30%, var(--color-preto)),
-      linear-gradient(180deg, transparent 30%, var(--color-preto)),
-      linear-gradient(0deg, transparent 65%, var(--color-preto));
+      linear-gradient(90deg, transparent 20%, var(--color-preto)),
+      linear-gradient(180deg, transparent 20%, var(--color-preto)),
+      linear-gradient(0deg, transparent 1%, var(--color-preto));
   }
 
 .wrapper-profile-photo {
@@ -240,6 +238,48 @@ body {
   }
 
   /* Final da primeira pagina */
+
+
+#about {
+    height: 100vh;
+    width: 100%;
+    background: var(--color-preto);
+    display: flex;
+    color: var(--color-white);
+}
+
+.background-about {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-wrapper {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.img-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: 
+        linear-gradient(.25turn, transparent 50%, var(--color-preto)),
+        linear-gradient(.5turn, transparent 50%, var(--color-preto)),
+        linear-gradient(1turn, transparent 65%, var(--color-preto));
+}
+
+.img-wrapper img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
 
 @keyframes written_text {
     100% {
