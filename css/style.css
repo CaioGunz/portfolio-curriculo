@@ -15,6 +15,8 @@
     --color-preto: #000000;
     --color-azul-verde-claro: #01DAC9;
     --color-azul-ver-escuro: #003638;
+    --color-verde-medio-escuro: #0B5758;
+    --color-verde-claro-medio: #106768;
 
 }
 
@@ -355,6 +357,130 @@ body {
 
 /* final da pagina sobre mim */
 
+#projects {
+    height: 100vh;
+    width: 100%;
+    background: var(--color-preto);
+    display: flex;
+    flex-direction: column;
+}
+
+.projects-title h2 {
+    margin: 3rem;
+    padding: 1rem;
+    font-size: 3rem;
+    color: var(--color-white);
+}
+
+.wrapper-projects {
+    display: flex;
+    margin-top: 2rem;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    color: var(--color-preto);
+}
+
+.card-project {
+    width: 320px;
+    height: 450px;
+    padding: 30px 20px 20px;
+    margin: 0px 10px;
+    position: relative;
+    background: var(--color-white);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+}
+
+.card-project::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40%;
+    width: 100%;
+    background: var(--color-verde-escuro);
+    border-radius: 20px 20px 0px 0px;
+}
+
+.content-project {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.img-project {
+    height: 240px;
+    width: 250px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+    border: 4px solid var(--color-verde-escuro);
+    margin: 0 auto;
+}
+
+.img-project a img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 30px;
+    border: 2px solid var(--color-white);
+    transition: transform .3s ease-out;
+    cursor: pointer;
+}
+
+.img-project a img:hover {
+    transform: scale(1.1);
+}
+
+.content-project span {
+    color: var(--color-preto);
+    font-weight: bold;
+    font-size: 1.7rem;
+    margin: .75rem auto .5rem auto;
+}
+
+.content-project p {
+    color: #3d3d4d;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0rem .75rem;
+}
+
+.cta-project {
+    width:200px;
+    margin: auto auto 15px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cta-project a {
+    padding: 5px 16px;
+    font-size: 1.25rem;
+    color: var(--color-white);
+    background-color: var(--color-verde-claro-medio);
+    border-radius: 10px;
+    text-decoration: none;
+    transition: opacity .3s ease;
+}
+
+.cta-project a:hover {
+    opacity: .7;
+}
+
+/* Final do Project */
+
+
+
 
 @keyframes written_text {
     100% {
@@ -378,4 +504,5 @@ body {
         left: 100%;
     }
 }
+
 
