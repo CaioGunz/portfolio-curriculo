@@ -29,6 +29,55 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px 30px;
+    position: fixed;
+    background: 'transparent';
+    z-index: 2;
+}
+
+.header-title {
+    text-decoration: none;
+}
+
+.header-title h1 {
+    color: var(--color-white);
+    font-size: 2rem;
+    transition: opacity .3s ease;
+}
+
+.header-title h1:hover {
+    opacity: .8;
+}
+
+.navbar {
+    max-width: 350px;
+    width: 100%;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navbar ul li {
+    list-style: none;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: var(--color-white);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+/*Final Header */
+
 #person {
     height: 100vh;
     width: 100%;
@@ -372,7 +421,7 @@ body {
     color: var(--color-white);
 }
 
-.wrapper-projects {
+/*.wrapper-projects {
     display: flex;
     margin-top: 2rem;
     height: 500px;
@@ -380,19 +429,34 @@ body {
     justify-content: center;
     flex-direction: row;
     color: var(--color-preto);
+}*/
+
+.swiper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 500px;
+    margin-top: 2rem;
 }
 
 .card-project {
-    width: 320px;
-    height: 450px;
+    /*width: 320px;
+    height: 450px;*/
+    height: 100%;
+    width: 100%;
     padding: 30px 20px 20px;
-    margin: 0px 10px;
+    /*margin: 0px 10px;*/
     position: relative;
     background: var(--color-white);
     display: flex;
     align-items: center;
     flex-direction: column;
     border-radius: 20px;
+
+    z-index: 1;
 }
 
 .card-project::after {
@@ -404,15 +468,16 @@ body {
     width: 100%;
     background: var(--color-verde-escuro);
     border-radius: 20px 20px 0px 0px;
+    z-index: -1;
 }
 
-.content-project {
+/*.content-project {
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     z-index: 1;
-}
+}*/
 
 .img-project {
     height: 240px;
@@ -441,14 +506,14 @@ body {
     transform: scale(1.1);
 }
 
-.content-project span {
+.card-project span {
     color: var(--color-preto);
     font-weight: bold;
     font-size: 1.7rem;
     margin: .75rem auto .5rem auto;
 }
 
-.content-project p {
+.card-project p {
     color: #3d3d4d;
     font-weight: bold;
     font-size: 1.2rem;
@@ -480,7 +545,94 @@ body {
 /* Final do Project */
 
 
+#contacts {
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    width: 100%;
+    background: var(--color-preto);
+    color: var(--color-white);
+}
 
+.contact-icon-content h2 {
+    margin: 3rem 3rem 3rem 0rem;
+    padding: 1rem 1rem 1rem 0rem;
+    font-size: 3rem;
+    color: var(--color-white);
+}
+
+.contact-icons-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+.contact-icon-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0rem 3rem;
+    padding: 1rem;
+}
+
+.contact-icon {
+    height:40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
+    background: var(--color-white);
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+.contact-icon i {
+    font-size: 2rem;
+    color: var(--color-verde-medio-escuro);
+}
+
+.contact-info span {
+    font-size: 1.2rem;
+    font-weight: bold;    
+}
+
+.contact-info p {
+    margin: .25rem 0rem;
+}
+
+.contact-info a {
+    margin: .25rem 0rem;
+    text-decoration: none;
+    color: var(--color-white);
+    display: block;
+}
+
+.contact-info a:hover {
+    transition: color .3s ease;
+    color: var(--color-verde-claro);
+}
+
+/* Final do Contacts */
+
+#footer {
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    background: #191919;
+}
+
+.container-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--color-white);
+}
 
 @keyframes written_text {
     100% {
