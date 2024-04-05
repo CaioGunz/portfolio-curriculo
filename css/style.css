@@ -37,6 +37,7 @@ body {
     padding: 15px 30px;
     position: fixed;
     background: 'transparent';
+    transition: all .3s ease-out;
     z-index: 2;
 }
 
@@ -431,9 +432,18 @@ body {
     color: var(--color-preto);
 }*/
 
+.container-projects {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .swiper {
     height: 100%;
     width: 100%;
+    max-width: 1020px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -480,8 +490,11 @@ body {
 }*/
 
 .img-project {
-    height: 240px;
-    width: 250px;
+    max-height: 240px;
+    max-width: 250px;
+
+    height: 100%;
+    width: 100%;
     position: relative;
     overflow: hidden;
     border-radius: 30px;
