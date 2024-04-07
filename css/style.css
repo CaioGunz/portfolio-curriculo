@@ -387,20 +387,25 @@ body {
     margin: 4rem 3rem;
 }
 
-.button-cta button {
+.button-cta a {
     display: inline-block;
     width: 100%;
     max-width: 172px;
     padding: 10px;
     margin-bottom: 3rem;
+    font-size: 2rem;
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     letter-spacing: .15rem;
+    color: var(--color-verde-medio-escuro);
+    background: var(--color-white);
+    text-align: center;
+    text-decoration: none;
     border-radius: 10px;
     cursor: pointer;
 }
 
-.button-cta button:hover {
+.button-cta a:hover {
     transition:  all .3s ease;
     filter: brightness(.8);
 }
@@ -422,15 +427,6 @@ body {
     color: var(--color-white);
 }
 
-/*.wrapper-projects {
-    display: flex;
-    margin-top: 2rem;
-    height: 500px;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    color: var(--color-preto);
-}*/
 
 .container-projects {
     height: 100%;
@@ -453,12 +449,10 @@ body {
 }
 
 .card-project {
-    /*width: 320px;
-    height: 450px;*/
+
     height: 100%;
     width: 100%;
     padding: 30px 20px 20px;
-    /*margin: 0px 10px;*/
     position: relative;
     background: var(--color-white);
     display: flex;
@@ -480,14 +474,6 @@ body {
     border-radius: 20px 20px 0px 0px;
     z-index: -1;
 }
-
-/*.content-project {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    z-index: 1;
-}*/
 
 .img-project {
     max-height: 240px;
