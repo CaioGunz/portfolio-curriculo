@@ -23,6 +23,7 @@
 html {
     scroll-behavior: smooth;
     font-size: 10px;
+    background: var(--color-preto);
 }
 
 body {
@@ -102,8 +103,8 @@ body {
     padding: 0px 4px;
     position: relative;
     width: fit-content;
-    font-size: 4.5rem;
-    line-height: 6rem;
+    font-size: calc(2vw + 1.5rem);
+    line-height: calc(3vw + 1.8rem);
     animation: written_text .5s ease forwards;
 }
 
@@ -161,57 +162,57 @@ body {
     margin-bottom: 10px;
 }
 
-.stacks ul {
+.stacks  {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 colunas */
     gap: 30px; /* Espaçamento entre as imagens */
     justify-items: center; /* Centraliza o conteúdo na horizontal */
 }
 
-.stacks ul li {
+.stacks li {
     position: relative;
     list-style: none;
     width: 100%;
     text-align: center;
 }
 
-.stacks ul li img {
+.stacks li img {
     width: 40px; /* Ajuste o tamanho conforme necessário */
     height: auto;
     transition: transform .3s ease;
 }
 
-.stacks ul li div img:hover {
+.stacks li div img:hover {
     transform: scale(1.2);
     cursor: pointer;
 }
 
-.stacks ul li div:hover::after {
+.stacks li div:hover::after {
     content: attr(data);
     position: absolute;
-    bottom: -30px; /* Posição abaixo da imagem */
+    bottom: -30px; 
     left: 50%;
-    transform: translateX(-50%); /* Centraliza horizontalmente */
-    padding: 5px 10px; /* Espaçamento interno */
+    transform: translateX(-50%); 
+    padding: 5px 10px; 
     color: var(--color-white);
     border-radius: 5px;
-    white-space: nowrap; /* Impede quebrar o texto em várias linhas */
-    opacity: 0; /* Inicialmente oculto */
+    white-space: nowrap; 
+    opacity: 0; 
     transition: opacity 0.3s ease;
 }
 
-.stacks ul li div:hover::before {
+.stacks li div:hover::before {
     content: '';
     position: absolute;
-    bottom: -10px; /* Posição abaixo da imagem */
+    bottom: -10px; 
     left: 50%;
     transform: translateX(-50%);
     border-width: 5px;
     border-style: solid;
-    border-color: transparent transparent rgba(0, 0, 0, 0.8) transparent; /* Triângulo para apontar para a imagem */
+    border-color: transparent transparent rgba(0, 0, 0, 0.8) transparent; 
 }
 
-.stacks ul li div:hover::after {
+.stacks li div:hover::after {
     opacity: 1; /* Torna visível ao passar o mouse */
 }
 
@@ -655,5 +656,4 @@ body {
         left: 100%;
     }
 }
-
 
