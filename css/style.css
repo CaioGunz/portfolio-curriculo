@@ -458,7 +458,12 @@ body {
     width: 100%;
     border-radius: 50%;
 }
-  
+
+.links a {
+  list-style: none;
+  text-decoration: none;
+}
+
 .links a img {
     width: calc(2vw + 0.8rem);
     height: calc(2vw + 0.8rem);
