@@ -323,7 +323,7 @@ body {
     content: attr(data);
     position: absolute;
     top: calc(3vw + 1rem);
-    left: calc(0.5vw + 0.5rem);
+    left: calc(0.5rem);
   
     width: 20px;
     height: 20px;
@@ -351,18 +351,18 @@ body {
     }
   
     .stacks li {
-      margin: 0px;
+      margin: 10px;
     }
   
     .stacks li img {
       width: calc(3.5vw + 0.5rem);
     }
+
     .stacks li div:hover::after {
-        top: calc(4vw + 1rem);
-        left: calc(0.5vw + 0.5rem);
+        top: calc(4vw + 1.5rem);
+        font-size: 8px;
     }
 }
-  
   
   /* sm -> md */
 @media (min-width: 377px) and (max-width: 768px) {
@@ -383,12 +383,18 @@ body {
     }
   
     .stacks li {
-      margin: 0px;
+      margin: 10px;
     }
   
     .stacks li img {
       width: calc(3.2vw + 0.5rem);
     }
+
+    .stacks li div:hover::after {
+      top: calc(4vw + 1.5rem);
+      left: calc(0.5vh + 0.5rem);
+      font-size: 10px;
+  }
 }
   
 @media (max-width: 1000px) and (orientation: landscape) {
