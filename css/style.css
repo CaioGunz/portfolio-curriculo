@@ -10,13 +10,16 @@
     --color-white: #f5f5f5;
     --color-cinza-Claro: #e9e9e9;
     --color-cinza-escuro: #CCCCCC;
-    --color-verde-escuro: #008F81;
-    --color-verde-claro: #00A293;
+    --color-verde-escuro: #2b66c6;
+    /* --color-verde-escuro: #3a69e7; */
+    --color-verde-claro: #2c5ad4;
     --color-preto: #000000;
     --color-azul-verde-claro: #01DAC9;
     --color-azul-ver-escuro: #003638;
-    --color-verde-medio-escuro: #0B5758;
-    --color-verde-claro-medio: #106768;
+    --color-verde-medio-escuro: #009daf;
+    /* --color-verde-medio-escuro: #0B5758; */
+    --color-verde-claro-medio: #009daf;
+    /* --color-verde-claro-medio: #106768; */
 
 }
 
